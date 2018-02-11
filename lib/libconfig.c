@@ -596,6 +596,16 @@ int config_read_string(config_t *config, const char *str)
 
 /* ------------------------------------------------------------------------- */
 
+int config_write_string(config_t *config, char *str, int len) {
+  char *str_bk = str;
+  int len_bk = len;
+  //TODO: serialize config as string;
+  return 0;
+}
+
+/* ------------------------------------------------------------------------- */
+
+
 static void __config_write_setting(const config_t *config,
                                    const config_setting_t *setting,
                                    FILE *stream, int depth)

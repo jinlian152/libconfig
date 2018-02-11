@@ -142,6 +142,8 @@ extern LIBCONFIG_API int config_get_option(const config_t *config, int option);
 
 extern LIBCONFIG_API int config_read_string(config_t *config, const char *str);
 
+extern LIBCONFIG_API int config_write_string(config_t *config, char *str, int len);
+
 extern LIBCONFIG_API int config_read_file(config_t *config,
                                           const char *filename);
 extern LIBCONFIG_API int config_write_file(config_t *config,

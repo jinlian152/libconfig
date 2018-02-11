@@ -466,6 +466,15 @@ void Config::readString(const char *str)
 
 // ---------------------------------------------------------------------------
 
+void writeString(char *str, int len) 
+{
+  if(! config_write_string(_config, str, len)) {
+    handleError();
+  }
+}
+
+// ---------------------------------------------------------------------------
+
 void Config::write(FILE *stream) const
 {
   config_write(_config, stream);
